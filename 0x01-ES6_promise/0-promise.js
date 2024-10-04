@@ -13,9 +13,9 @@ function getResponseFromAPI() {
 }
 
 getResponseFromAPI()
-  .then(response => {
+  .then((response) => {
     console.log(response);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
   });
