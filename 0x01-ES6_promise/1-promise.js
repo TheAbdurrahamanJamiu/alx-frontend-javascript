@@ -1,4 +1,4 @@
-function getFullResponseFromAPI(success) {
+export default function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
     if (success) {
       resolve({
@@ -10,20 +10,3 @@ function getFullResponseFromAPI(success) {
     }
   });
 }
-
-// Example usage
-getFullResponseFromAPI(true)
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-getFullResponseFromAPI(false)
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
