@@ -3,7 +3,7 @@ function getFullResponseFromAPI(success) {
     if (success) {
       resolve({
         status: 200,
-        body: 'Success'
+        body: 'Success',
       });
     } else {
       reject(new Error('The fake API is not working currently'));
@@ -13,17 +13,17 @@ function getFullResponseFromAPI(success) {
 
 // Example usage
 getFullResponseFromAPI(true)
-  .then(response => {
+  .then((response) => {
     console.log(response);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
   });
 
 getFullResponseFromAPI(false)
-  .then(response => {
+  .then((response) => {
     console.log(response);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
   });
