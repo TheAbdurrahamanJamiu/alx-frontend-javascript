@@ -1,9 +1,9 @@
-import ClassRoom from './0-classroom';  // Adjust the path as necessary
+import ClassRoom from './0-classroom';
 
-export function initializeRooms() {
-    return [
-        new ClassRoom(19),
-        new ClassRoom(20),
-        new ClassRoom(34)
-    ];
+export default function initializeRooms() {
+  return [
+    new ClassRoom(19),
+    new ClassRoom(20),
+    new ClassRoom(34), // Added trailing comma here
+  ];
 }

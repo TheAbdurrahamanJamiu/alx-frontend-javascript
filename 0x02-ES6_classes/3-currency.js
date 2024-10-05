@@ -1,18 +1,14 @@
-class Currency {
+export default class Currency {
   constructor(code, name) {
-    this._code = code;
-    this._name = name;
+    this.code = code;
+    this.name = name;
   }
 
   get code() {
     return this._code;
   }
 
-
   set code(value) {
-    if (typeof value !== 'string') {
-      throw new TypeError('code must be a string');
-    }
     this._code = value;
   }
 
@@ -21,20 +17,14 @@ class Currency {
   }
 
   set name(value) {
-    if (typeof value !== 'string') {
-      throw new TypeError('name must be a string');
-    }
     this._name = value;
   }
 
+  /**
+   * Creates the full string representation of this Currency.
+   * @returns {String}
+   */
   displayFullCurrency() {
-    return `${this._name} (${this._code})`;
+    return `${this.name} (${this.code})`;
   }
 }
-
-const usd = new Currency('USD', 'United States Dollar');
-console.log(usd.displayFullCurrency()); 
-
-usd.code = 'USD';
-usd.name = 'US Dollar';
-console.log(usd.displayFullCurrency());
